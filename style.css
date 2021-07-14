@@ -11,6 +11,37 @@ p {
   font-weight: 200;
 }
 
+/* Nav section */
+.nav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-main ul {
+  margin: 0;
+  padding: 0;
+  /* margin: 0 200px; */
+}
+.nav-main ul li {
+  display: inline-block;
+  color: #fff;
+  list-style: none;
+  margin-top: 20px;
+}
+.nav-main ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+.nav-main ul li .button {
+  margin: 0;
+}
+
+.nav-main ul li a:hover {
+  color: #e02c6d;
+}
+
 /* header section */
 .header-main {
   background-color: #2d25a0;
@@ -25,12 +56,12 @@ p {
   font-weight: 700;
   font-size: 64px;
   color: #fff;
-  margin-top: 207px;
+  margin-top: 140px;
 }
 
 .header-img img {
   width: 556px;
-  margin-top: 150px;
+  margin-top: 90px;
 }
 .button {
   width: 168px;
@@ -40,7 +71,7 @@ p {
   font-size: 16px;
   font-weight: 400;
   border: none;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .button a {
   text-decoration: none;
@@ -222,7 +253,13 @@ footer section
 responsive with media queries section
 ........................................ */
 
+/* notebook */
+
 @media only screen and (min-width: 990px) and (max-width: 1200px) {
+  /* navbar responsive section */
+  .nav-main {
+    display: none;
+  }
   /* header responsive section */
   .header-img img {
     width: 440px;
@@ -253,7 +290,12 @@ responsive with media queries section
   }
 }
 
+/*responsive tab */
 @media only screen and (min-width: 762px) and (max-width: 990px) {
+  /* navbar responsive section */
+  .nav-main {
+    display: none;
+  }
   /* header responsive section */
   .header-main {
     height: 550px;
@@ -308,8 +350,13 @@ responsive with media queries section
   }
 }
 
-/* semi-tab */
+/* responsive mobile/semi-tab */
+
 @media only screen and (min-width: 480px) and (max-width: 762px) {
+  /* navbar responsive section */
+  .nav-main {
+    display: none;
+  }
   /* header responsive section */
   .header {
     flex-wrap: wrap;
@@ -370,7 +417,13 @@ responsive with media queries section
   }
 }
 
+/* responsive mobile-sm */
+
 @media only screen and (max-width: 480px) {
+  /* navbar responsive section */
+  .nav-main {
+    display: none;
+  }
   /* header responsive section */
   .header {
     flex-wrap: wrap;
