@@ -6,10 +6,12 @@ p {
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
-small {
+small,
+p {
   font-weight: 200;
 }
 
+/* header section */
 .header-main {
   background-color: #2d25a0;
   height: 690px;
@@ -17,7 +19,6 @@ small {
 }
 .header {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-evenly;
 }
 .header-text h1 {
@@ -48,6 +49,7 @@ small {
 .button:hover {
   background-color: #bb0749;
 }
+
 /* blog section */
 .main {
   background: #f0f0f0;
@@ -67,12 +69,13 @@ small {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 27px 30px;
-  /* grid-auto-flow: row; */
   margin-top: 70px;
 }
 .blog-img img {
   width: 330px;
 }
+
+/* highlight section */
 .highlight {
   display: flex;
   justify-content: center;
@@ -91,6 +94,10 @@ small {
   height: 427px;
   margin-left: 66px;
 }
+
+/*.................
+testimonial section 
+...................*/
 .testimonials-title {
   font-size: 45px;
   font-weight: 700;
@@ -100,27 +107,40 @@ small {
 
 .testimonials {
   display: flex;
+  justify-content: center;
 }
 .testimonial {
   width: 340px;
   margin: 25px 10px;
   background-color: #fff;
   padding: 10px;
+  box-shadow: 10px 10px 10px lightgray;
+  border-radius: 5px;
 }
 .testimonial img {
   width: 340px;
-  height: 250px;
+  height: 300px;
 }
+
+/*.................
+contact with player section
+...................*/
 .contact-text {
   text-align: center;
   margin-top: 35px;
+}
+.form-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
 }
 input,
 textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -140,6 +160,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #bb0749;
 }
+
+/*.................
+footer section 
+...................*/
 .footer-main {
   display: flex;
   flex-direction: column;
@@ -152,11 +176,15 @@ input[type="submit"]:hover {
   width: 483px;
   height: 110px;
 }
+
+/* footer font awesome section */
 .footer-icon {
   margin: 20px;
 }
 .footer-icon ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .footer-icon li {
   display: inline-block;
@@ -175,7 +203,6 @@ input[type="submit"]:hover {
   color: #fff;
   background-color: #e02c6d;
 }
-
 .fab:before {
   position: absolute;
   top: 8px;
@@ -185,27 +212,38 @@ input[type="submit"]:hover {
 .fab.fa-linkedin:before {
   right: 9px;
 }
+
+/* .copyright section */
 .copyright p {
   font-size: 18px;
 }
 
+/*........................................ 
+responsive with media queries section
+........................................ */
+
 @media only screen and (min-width: 990px) and (max-width: 1200px) {
+  /* header responsive section */
   .header-img img {
     width: 440px;
   }
+  /* blog responsive section */
   .blog {
     width: 277px;
   }
   .blog-img img {
     width: 275px;
   }
+  /* highlight responsive section */
   .highlight-img img {
     width: 434px;
+    height: 100%;
     margin-left: 66px;
   }
   .highlight-text h1 {
     font-size: 41px;
   }
+  /* testimonial responsive section */
   .testimonial {
     width: 259px;
   }
@@ -216,33 +254,33 @@ input[type="submit"]:hover {
 }
 
 @media only screen and (min-width: 762px) and (max-width: 990px) {
-  .header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
-  }
+  /* header responsive section */
   .header-main {
-    background-color: #2d25a0;
-    height: 850px;
+    height: 550px;
     width: 100%;
   }
 
   .header-text h1 {
-    font-size: 40px;
-    margin-top: 120px;
+    font-size: 38px;
+    margin-top: 130px;
   }
   .header-img img {
-    width: 485px;
-    margin-top: 50px;
+    width: 450px;
+    margin-top: 90px;
   }
+
+  /* blog responsive section */
   .blog-items {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 27px 30px;
-    /* grid-auto-flow: row; */
     margin-top: 70px;
   }
+  /* highlight responsive section */
+  .highlight-img img {
+    height: 100%;
+  }
+
+  /* testimonial responsive section */
   .testimonials {
     display: flex;
     flex-direction: row;
@@ -267,43 +305,52 @@ input[type="submit"]:hover {
     width: 472px;
     margin-top: 30px;
     margin-left: 0;
-  }
-  .contact {
-    margin-left: 125px;
   }
 }
 
 /* semi-tab */
-
 @media only screen and (min-width: 480px) and (max-width: 762px) {
+  /* header responsive section */
   .header {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
   }
   .header-main {
-    background-color: #2d25a0;
     height: 850px;
     width: 100%;
   }
 
   .header-text h1 {
     font-size: 40px;
-    margin-top: 120px;
+    margin-top: 60px;
   }
   .header-img img {
     width: 485px;
     margin-top: 50px;
   }
+  /* blog responsive section */
   .blog-items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 27px 30px;
-    /* grid-auto-flow: row; */
     margin-top: 70px;
   }
 
+  /* highlight responsive section */
+  .highlight {
+    margin-top: 120px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .highlight-text h1 {
+    font-size: 38px;
+  }
+  .highlight-img img {
+    width: 472px;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+  /* testimonial responsive section */
   .testimonials {
     display: flex;
     flex-direction: row;
@@ -316,22 +363,7 @@ input[type="submit"]:hover {
   input[type="submit"] {
     width: 75%;
   }
-  .highlight {
-    margin-top: 120px;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .highlight-text h1 {
-    font-size: 38px;
-  }
-  .highlight-img img {
-    width: 472px;
-    margin-top: 30px;
-    margin-left: 0;
-  }
-  .contact {
-    margin-left: 100px;
-  }
+  /* footer responsive section */
   .footer-img img {
     width: 275px;
     height: 70px;
@@ -339,4 +371,90 @@ input[type="submit"]:hover {
 }
 
 @media only screen and (max-width: 480px) {
+  /* header responsive section */
+  .header {
+    flex-wrap: wrap;
+  }
+  .header-main {
+    height: 710px;
+    width: 100%;
+  }
+
+  .header-text {
+    width: 200px;
+  }
+  .header-text h1 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+  .header-img img {
+    width: 250px;
+    margin-top: 50px;
+  }
+  /* blog responsive section */
+  .blog-items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog {
+    width: 260px;
+  }
+  .blog img {
+    width: 260px;
+  }
+  /* highlight responsive section */
+  .highlight {
+    margin-top: 70px;
+    flex-wrap: wrap;
+  }
+
+  .highlight-text {
+    width: 260px;
+  }
+  .highlight-text h1 {
+    font-size: 30px;
+  }
+  .highlight-img img {
+    width: 260px;
+    height: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  /* testimonial responsive section */
+  .testimonials {
+    flex-wrap: wrap;
+  }
+  .testimonials-main h1 {
+    font-size: 30px;
+  }
+  .testimonial {
+    width: 260px;
+  }
+  .testimonial img {
+    width: 260px;
+    height: 200px;
+  }
+
+  /* contact responsive section */
+  input,
+  textarea {
+    width: 75%;
+  }
+  input[type="submit"] {
+    width: 75%;
+  }
+
+  .form-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-main {
+    height: 400px;
+  }
+  .footer-img img {
+    width: 260px;
+    height: 70px;
+  }
 }
